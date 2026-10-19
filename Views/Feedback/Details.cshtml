@@ -1,0 +1,28 @@
+@model FeedbackManagementMVC.Models.Feedback
+@{
+    ViewData["Title"] = "Feedback Details";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h1 class="h5 mb-0">Feedback Details #@Model.Id</h1>
+            </div>
+            <div class="card-body p-4">
+                <dl class="row mb-0">
+                    <dt class="col-sm-4">Student Name</dt><dd class="col-sm-8">@Model.StudentName</dd>
+                    <dt class="col-sm-4">Email Address</dt><dd class="col-sm-8"><a href="mailto:@Model.Email">@Model.Email</a></dd>
+                    <dt class="col-sm-4">Category</dt><dd class="col-sm-8"><span class="badge text-bg-info">@Model.Category</span></dd>
+                    <dt class="col-sm-4">Rating</dt><dd class="col-sm-8"><span class="stars">@(new string('★', Math.Clamp(Model.Rating, 0, 5)))</span> (@Model.Rating / 5)</dd>
+                    <dt class="col-sm-4">Comments</dt><dd class="col-sm-8">@Model.Comments</dd>
+                    <dt class="col-sm-4">Submitted Date</dt><dd class="col-sm-8">@Model.SubmissionDate.ToString("dd MMMM yyyy, hh:mm tt")</dd>
+                </dl>
+                <div class="mt-4 d-flex gap-2">
+                    <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+                    <a asp-action="Create" class="btn btn-primary">Submit Another Feedback</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

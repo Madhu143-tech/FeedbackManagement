@@ -1,0 +1,12 @@
+html { font-size: 14px; }
+body { background: #f4f8fb; color: #212529; }
+main.container { max-width: 1180px; }
+.navbar-brand { letter-spacing: .2px; }
+.card { overflow: hidden; }
+.table th { white-space: nowrap; font-size: .88rem; }
+.table td { font-size: .9rem; }
+.comment-cell { min-width: 210px; max-width: 300px; }
+.stars { color: #f2b01e; letter-spacing: 1px; white-space: nowrap; }
+footer { font-size: .85rem; }
+.field-validation-error { display: block; margin-top: .25rem; }
+input.input-validation-error, select.input-validation-error, textarea.input-validation-error { border-color: #dc3545; }

@@ -1,0 +1,21 @@
+@model FeedbackManagementMVC.Models.Feedback
+@{
+    ViewData["Title"] = "Submit Feedback";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+        <div class="card border-0 shadow-sm rounded-3">
+            <div class="card-header bg-primary text-white py-3">
+                <h1 class="h5 mb-1 fw-bold">Feedback Submission Form</h1>
+                <small>HTML Helpers, Partial Views, Layout and Model Validation</small>
+            </div>
+            <div class="card-body p-4">
+                @await Html.PartialAsync("_FeedbackFormPartial", Model)
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
